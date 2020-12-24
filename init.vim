@@ -1,5 +1,5 @@
 "" using vim-plug
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/plugged')
 
 " Install tokyovim theme
 Plug 'ghifarit53/tokyonight-vim'
@@ -15,6 +15,9 @@ Plug 'flazz/vim-colorschemes'
 
 " Term split in nvim 
 Plug 'vimlab/split-term.vim'
+
+" Nerd tree file explorer
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -34,6 +37,10 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
+" Nerd tree auto start when no File specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "" User settings
 colorscheme tokyonight
