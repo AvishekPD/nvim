@@ -1,24 +1,14 @@
 " Calling vim plug 
-call plug#begin('~/.vim/plugged')
+source $HOME/.config/nvim/pluglist.vim
 
-Plug 'ghifarit53/tokyonight-vim' " Install tokyovim theme
-Plug 'psliwka/vim-smoothie' " Vim Smoothie
-Plug 'vimlab/split-term.vim' " Term split in nvim 
-Plug 'sheerun/vim-polyglot' " Add support for various language
-Plug 'vifm/vifm.vim' " Vin File manager
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " Conquer of Completion 
+"" Config File
+source $HOME/.config/nvim/plug-config/coc.vim 
+source $HOME/.config/nvim/plug-config/tokyonight.vim
 
-call plug#end()
+"" User settings
 
 set nocompatible
 set termguicolors
-
-"" Tokyo-Night 
-let g:tokyonight_style = 'night' " available: night, storm
-let g:tokyonight_enable_italic = 1
-let g:tokyonight_transparent_background = 1
-
-"" User settings
 
 colorscheme tokyonight
 set cursorline
@@ -38,5 +28,3 @@ nmap <C-k> <C-u>
 nmap <Space> :Vifm .<CR>
 nmap <C-Tab> :tabn
 
-"" Config File
-source $HOME/.config/nvim/plug-config/coc.vim 
