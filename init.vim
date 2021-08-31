@@ -3,6 +3,7 @@ source $HOME/.config/nvim/pluglist.vim
 
 "" Config File
 source $HOME/.config/nvim/plug-config/coc.vim 
+source $HOME/.config/nvim/plug-config/coc-explorer.vim
 source $HOME/.config/nvim/plug-config/tokyonight.vim
 
 "" User settings
@@ -25,6 +26,5 @@ filetype indent plugin on
 " My keymaps 
 nmap  <C-j> <C-d>
 nmap <C-k> <C-u>
-nmap <Space> :Vifm .<CR>
 nmap <C-Tab> :tabn
 
