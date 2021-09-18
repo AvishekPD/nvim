@@ -26,5 +26,5 @@ filetype indent plugin on
 " My keymaps 
 nmap  <C-j> <C-d>
 nmap <C-k> <C-u>
-nmap <C-Tab> :tabn
+noremap <Tab> :bn<CR>
 
